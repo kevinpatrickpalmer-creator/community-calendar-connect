@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Let's Talk Business: Community Calendar Connect</title>
+<style>
+  :root {
+    --paper: #f5f5f2;
+    --ink: #1a1a1a;
+    --ink-soft: #4a4a45;
+    --brick: #a71a2d;
+    --navy: #1e3a8a;
+    --gold: #a8730f;
+    --gold-tint: #f6ead2;
+    --rule: #d8d3c4;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--paper);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    color: var(--ink);
+  }
+  a { color: var(--brick); text-decoration: none; font-weight: 700; }
+  a:hover { color: var(--navy); }
+  .serif { font-family: Georgia, "Times New Roman", Times, serif; }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 0 1.25rem; }
+  .topbar {
+    background: var(--navy);
+    padding: .85rem 1.25rem;
+  }
+  .topbar .wrap { display: flex; align-items: center; }
+  .topbar a { color: #cdd8f5; font-size: .85rem; font-weight: 700; }
+  .topbar a:hover { color: #fff; }
+  .hero {
+    padding: 2.75rem 1.25rem 0;
+  }
+  .hero h1 {
+    font-size: clamp(1.8rem, 5vw, 2.4rem);
+    margin: 0 0 .75rem;
+    text-align: center;
+  }
+  .hero p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--ink-soft);
+    text-align: center;
+    max-width: 34rem;
+    margin: 0 auto;
+  }
+  .proof {
+    text-align: center;
+    margin: 1.5rem auto 0;
+    padding: .9rem 1.1rem;
+    background: var(--gold-tint);
+    border: 2px solid var(--brick);
+    border-radius: 8px;
+    max-width: 30rem;
+    font-size: .92rem;
+  }
+  .label {
+    display: flex; align-items: center; gap: .6rem;
+    font-size: .75rem; font-weight: 700; letter-spacing: .1em;
+    text-transform: uppercase; color: var(--navy); margin: 0 0 .9rem;
+  }
+  .label::after { content: ""; flex: 1; height: 1px; background: var(--rule); }
+  .card {
+    background: #fff; border: 1px solid var(--rule); border-radius: 8px;
+    padding: 1.4rem;
+  }
+  .card p { font-size: .95rem; line-height: 1.65; color: var(--ink-soft); margin: 0 0 .9rem; }
+  .card p:last-child { margin-bottom: 0; }
+  .card ul { margin: 0 0 .9rem; padding-left: 1.2rem; }
+  .card li { font-size: .95rem; line-height: 1.6; color: var(--ink-soft); margin-bottom: .35rem; }
+  section { margin: 2.5rem 0; }
+  form { background: #fff; border: 1px solid var(--rule); border-radius: 8px; padding: 1.5rem; }
+  label { display: block; font-weight: 700; font-size: .88rem; margin: 1rem 0 .35rem; }
+  label:first-of-type { margin-top: 0; }
+  input, select, textarea {
+    width: 100%;
+    padding: .65rem .7rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-family: inherit;
+    background: #fff;
+    color: var(--ink);
+  }
+  textarea { resize: vertical; min-height: 6rem; }
+  .hp { position: absolute; left: -9999px; }
+  button {
+    width: 100%;
+    margin-top: 1.5rem;
+    padding: .85rem;
+    font-size: 1.05rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 8px;
+    background: var(--brick);
+    color: #fff;
+    cursor: pointer;
+  }
+  button:disabled { opacity: .6; }
+  #status { margin-top: 1rem; font-size: .95rem; text-align: center; }
+  #status.ok { color: #1a7d3c; }
+  #status.err { color: var(--brick); font-weight: 700; }
+  .footer {
+    text-align: center;
+    font-size: .85rem;
+    color: var(--ink-soft);
+    padding: 1.5rem 1.25rem 3rem;
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap"><a href="index.html">&larr; Community Calendar Connect</a></div>
+</div>
+
+<div class="hero">
+  <h1 class="serif">Let's talk business</h1>
+  <p>Community Calendar Connect already works, for free, in Linn County. If you're with a city, a county, or a newspaper, here's what working together could look like.</p>
+  <div class="proof">
+    See it live: <a href="https://linn.communitycalendarconnect.com/">linn.communitycalendarconnect.com &rarr;</a>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <section>
+    <div class="label">For City &amp; County Officials</div>
+    <div class="card">
+      <p>Residents already get the calendar for free: no cost to your office, nothing new for your staff to run or maintain. A partnership goes further than that.</p>
+      <ul>
+        <li>Official branding, so residents know it's endorsed by your city or county</li>
+        <li>A direct line to us for changes, questions, or support</li>
+        <li>Priority when we build new features</li>
+      </ul>
+      <p>We're still early, so terms get worked out one conversation at a time, not off a price sheet.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="label">For News Organizations</div>
+    <div class="card">
+      <p>Building and maintaining a real events calendar takes ongoing staff time most newsrooms don't have to spare. Community Calendar Connect already does that work, and it can live right on your own site.</p>
+      <ul>
+        <li>Embeds directly into any page that allows HTML, no development work needed</li>
+        <li>Can be pre-filtered to just your coverage area</li>
+        <li>Gives readers something genuinely useful without adding to your workload</li>
+      </ul>
+      <p>It's a way to keep readers coming back to your site, not send them somewhere else.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="label">Why Residents Stay Free</div>
+    <div class="card">
+      <p>Free means free, for residents, and that's not changing. Our business conversations are with the organizations that already make information official and reliable for a whole community: city and county governments, and local newspapers. That's who we grow with.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="label">Get In Touch</div>
+    <form id="businessForm">
+      <label for="name">Your name *</label>
+      <input id="name" name="name" type="text" maxlength="120" required>
+
+      <label for="organization">Organization *</label>
+      <input id="organization" name="organization" type="text" maxlength="150" placeholder="e.g. City of Brookfield, or the Linn County Leader" required>
+
+      <label for="role">You're reaching out as *</label>
+      <select id="role" name="role" required>
+        <option value="" disabled selected>Select one</option>
+        <option value="City or county official">City or county official</option>
+        <option value="Newspaper or news organization">Newspaper or news organization</option>
+        <option value="Other">Other</option>
+      </select>
+
+      <label for="email">Email *</label>
+      <input id="email" name="email" type="email" maxlength="150" required>
+
+      <label for="phone">Phone (optional)</label>
+      <input id="phone" name="phone" type="tel" maxlength="30">
+
+      <label for="message">What are you interested in? *</label>
+      <textarea id="message" name="message" maxlength="1000" required></textarea>
+
+      <!-- Honeypot: real visitors never see or fill this in; bots often do. -->
+      <input class="hp" type="text" name="botcheck" tabindex="-1" autocomplete="off">
+
+      <button type="submit" id="submitBtn">Send</button>
+      <div id="status" role="status"></div>
+    </form>
+  </section>
+
+</div>
+
+<div class="footer">
+  Questions? <a href="mailto:kevin@communitycalendarconnect.com">kevin@communitycalendarconnect.com</a>
+</div>
+
+<script>
+document.getElementById("businessForm").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const form = e.target;
+  const submitBtn = document.getElementById("submitBtn");
+  const statusEl = document.getElementById("status");
+
+  if (form.botcheck.value) return; // honeypot tripped, silently drop
+
+  const data = new FormData(form);
+  data.append("access_key", "84cb6687-b7d7-453d-b3c0-6faca29868ed");
+  data.append("subject", `Business inquiry: ${data.get("organization")}`);
+  data.append("from_name", "Community Calendar Connect Business Inquiry");
+
+  submitBtn.disabled = true;
+  submitBtn.textContent = "Sending...";
+  statusEl.textContent = "";
+  statusEl.className = "";
+
+  try {
+    const res = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: { Accept: "application/json" },
+      body: data,
+    });
+    const result = await res.json();
+
+    if (result.success) {
+      statusEl.textContent = "Thanks! We'll be in touch soon.";
+      statusEl.className = "ok";
+      form.reset();
+    } else {
+      throw new Error(result.message || "Submission failed");
+    }
+  } catch (err) {
+    statusEl.textContent = "Something went wrong. Please email kevin@communitycalendarconnect.com directly instead.";
+    statusEl.className = "err";
+  } finally {
+    submitBtn.disabled = false;
+    submitBtn.textContent = "Send";
+  }
+});
+</script>
+
+</body>
+</html>
