@@ -115,6 +115,27 @@
       <p style="font-size: .95rem; line-height: 1.65; color: var(--ink-soft); margin: 1rem 0 0; text-align: center;">Every school, church, city hall, and civic group already posts their own news, just on their own website or their own Facebook page. By the time most people hear about something, it's already over, not because nobody announced it, but because it was announced somewhere they weren't looking.</p>
     </div>
 
+    <!-- See how it works -->
+    <div>
+      <div class="label">See How It Works</div>
+      <!-- Once the explainer video exists, put the file at
+           docs/explainer.mp4 (self-hosted -- GitHub Pages serves it
+           directly, no other setup) and this starts playing it
+           automatically, no other change needed. To host on
+           YouTube/Vimeo instead, replace the <video> element below with
+           an <iframe> embed, keeping the same wrapper div so it stays
+           responsive. -->
+      <div style="position: relative; width: 100%; padding-top: 56.25%; background: var(--rule); border-radius: 8px; overflow: hidden;">
+        <video id="explainerVideo" controls preload="metadata" poster="video-poster.jpg" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; background: #000; visibility: hidden;">
+          <source src="explainer.mp4" type="video/mp4">
+        </video>
+        <div id="videoPlaceholder" style="position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: .5rem; color: var(--ink-soft); pointer-events: none;">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9.25"/><path d="M10 8.5v7l6-3.5-6-3.5Z" fill="currentColor" stroke="none"/></svg>
+          <span style="font-size: .85rem; font-weight: 700;">Video coming soon</span>
+        </div>
+      </div>
+    </div>
+
     <!-- What it is / Add your own event, side by side -->
     <div>
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.1rem;">
@@ -213,5 +234,21 @@
   </div>
 
 </div>
+<script>
+  // Shows the "coming soon" placeholder until docs/explainer.mp4 actually
+  // exists -- preload="metadata" makes the browser fetch just enough to
+  // fire loadedmetadata on page load without downloading the whole file,
+  // so this swaps over automatically the moment a real video is added,
+  // no other change needed.
+  (function () {
+    const video = document.getElementById("explainerVideo");
+    const placeholder = document.getElementById("videoPlaceholder");
+    if (!video || !placeholder) return;
+    video.addEventListener("loadedmetadata", () => {
+      placeholder.style.display = "none";
+      video.style.visibility = "visible";
+    });
+  })();
+</script>
 </body>
 </html>
